@@ -1,0 +1,36 @@
+library:
+  source-dirs: src
+tests:
+  CV-test:
+    source-dirs: test
+    main: Spec.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - CV
+copyright: 2018 Dmitrij Pavluk
+maintainer: al.lastor@bk.ru
+dependencies:
+- free
+- base >= 4.7 && < 5
+name: CV
+version: 0.1.0.0
+extra-source-files:
+- README.md
+- ChangeLog.md
+author: Dmitrij Pavluk
+github: vojiranto/CV
+license: BSD3
+executables:
+  CV-exe:
+    source-dirs: app
+    main: Main.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - CV
+description: Please see the README on GitHub at <https://github.com/vojiranto/CV#readme>
